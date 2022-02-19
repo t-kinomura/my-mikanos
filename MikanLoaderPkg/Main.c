@@ -94,6 +94,7 @@ EFI_STATUS SaveMemoryMap(struct MemoryMap* map, EFI_FILE_PROTOCOL* file)
             desc->NumberOfPages,
             desc->Attribute & 0xffffflu
         );
+        file->Write(file, &len, buf);
     }
 
     return EFI_SUCCESS;
