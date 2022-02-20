@@ -226,11 +226,6 @@ EFI_STATUS EFIAPI UefiMain(
         gop->Mode->FrameBufferSize
     );
 
-    UINT8* frame_buffer = (UINT8*)gop->Mode->FrameBufferBase;
-    for (UINTN i = 0; i < gop->Mode->FrameBufferSize; ++i) {
-        frame_buffer[i] = 255;
-    }
-
     // カーネルファイルを読み込む
     EFI_FILE_PROTOCOL* kernel_file;
     root_dir->Open(
