@@ -1,1 +1,3 @@
 disk.img
+kernel/main.o
+kernel/kernel.elf
