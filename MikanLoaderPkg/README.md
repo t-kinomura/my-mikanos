@@ -19,6 +19,17 @@ $ source edksetup.sh
 
 4. ビルド実行
 ```
+// ブートローダーのビルド
 $ build
-$  ~/osbook/devenv/run_qemu.sh Build/MikanLoaderPkg/DEBUG_CLANG38/X64/Loader.efi
+
+// カーネルのビルド
+$ pwd
+/workspace/my-mikanos/kernel
+$ source ~/osbook/devenv/buildenv.sh
+$ make
+```
+
+5. 実行
+```
+$  ~/osbook/devenv/run_qemu.sh Build/MikanLoaderPkg/DEBUG_CLANG38/X64/Loader.efi /workspaces/my-mikanos/kernel/kernel.elf
 ```
