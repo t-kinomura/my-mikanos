@@ -7,7 +7,7 @@ LDFLAGS += --entry KernelMain -z norelro --image-base 0x100000 --static
 .PHONY: all
 all: $(TARGET)
 
-.phony: clean
+.PHONY: clean
 clean:
 	rm -rf *.o
 
